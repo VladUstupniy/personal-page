@@ -7,11 +7,13 @@ $(document).ready(function(){
     $pauseBtn = $('#audio-pause');
     $audioControl = $('[data-type="audio-control"]');
     
-    
+    audio.play();
     function initAudioPlayer(){
-        $pauseBtn.parent().show();
+        $playBtn.parent().show();
         audio.loop = true;
-        //audio.play();
+        
+        
+
         $audioControl.click(function(){
             console.log('audio control click');
 
@@ -28,6 +30,4 @@ $(document).ready(function(){
     };
 
     initAudioPlayer();
-
-    audio.play();
 });
